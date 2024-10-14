@@ -5,7 +5,7 @@ const Footer =() =>{
     return(
         <>
         <footer className="bg-light text-center">
-            <p>@ 2022 The CarMarket. All Rights Reserved | Terms and Conditions</p>
+            <p>@ 2024 The CarMarket. All Rights Reserved | Terms and Conditions</p>
 
         </footer>
         </>

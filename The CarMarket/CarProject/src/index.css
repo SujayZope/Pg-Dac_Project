@@ -107,5 +107,11 @@
     transform: translateY(-10px);
   }
 }
-
-
+footer{
+position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+html{
+  height: 100%;
+}
