@@ -17,37 +17,34 @@ import com.example.demo.service.LoginService;
 @RestController
 public class LoginController {
 
-	
 //	@Autowired
 //	Registerdao regdao;
-	
+
 //	@Autowired
 //	LoginRepositary loginrepo;
-	
+
 	@Autowired
 	LoginService lservice;
-	
+
 	@Autowired
 	Registerdao registerdao;
-	
+
 	@GetMapping("/login")
-	public Object registerdata(@RequestParam("username") String username,@RequestParam("password") String password)
-	{
-	
+	public Object registerdata(@RequestParam("username") String username, @RequestParam("password") String password) {
+
 		System.out.println("in login");
 //		if(username.equals("admin"))
 //		{
 //			Register r = new Register()
 //		}
-		System.out.println("usern "+username+" pass "+password);
-		System.out.println(username.getClass(). getSimpleName());
-		
+		System.out.println("usern " + username + " pass " + password);
+		System.out.println(username.getClass().getSimpleName());
+
 		Object registerObject = lservice.checkLogin(username, password);
-		System.out.println("registerObject --> "+registerObject);
+		System.out.println("registerObject --> " + registerObject);
 //		
 
 		return registerObject;
 	}
-	
-	
+
 }

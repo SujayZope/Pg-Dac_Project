@@ -4,84 +4,50 @@ import java.time.LocalDate;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
-import javax.persistence.Table;
 
-import org.hibernate.annotations.ManyToAny;
+public class Cars_coming {
 
-@Entity
-@Table
-public class Cars {
-	@Id //PK 
-	@GeneratedValue(strategy = GenerationType.IDENTITY) //strategy = AUTO will be replaced : auto_increment
-	@Column(name = "id")
-	private Integer carId;
-	@Column(name="company",nullable = true)
 	private String carCompany;
 
-	@Column( name = "color")
 	private String color;
-	
-	@Column(name = "purchase_date")
+
 	private LocalDate purchaseDate;
-	
-	
-	@Column
+
 	private int owners;
-	
-	@Column(name = "total_running")
+
 	private Integer totalRunning;
-	
-	
-	@Column
+
 	private String carModel;
-	
-	
-	@Column(name = "reg_no")
+
 	private String regno;
-	
-	@Column
+
 	private double price;
-	
-	
-	@Column(name = "city")
+
 	private String city;
-	
-	
 
-	@Column(name = "state")
 	private String state;
-	
-	
 
-	@Column(name = "pinNo")
 	private String pinNo;
-	
-	@Column(name = "photo")
-	private String photo;
-	
-	@ManyToOne()
-	@JoinColumn(name = "cid")
-	Register register;
 
-	public Cars() {
+	private String photo;
+
+	int ccid;
+//	String fname;
+
+	public Cars_coming() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Cars(String carCompany, String color, LocalDate purchaseDate, int owners,
-			Integer totalRunning, String carModel, String regno, double price, String city, String state, String pinNo,
-			String photo, Register register) {
+	public Cars_coming(String carCompany, String color, LocalDate purchaseDate, int owners, Integer totalRunning,
+			String carModel, String regno, double price, String city, String state, String pinNo, String photo,
+			int ccid) {
 		super();
-		this.carId = carId;
 		this.carCompany = carCompany;
 		this.color = color;
 		this.purchaseDate = purchaseDate;
@@ -94,15 +60,7 @@ public class Cars {
 		this.state = state;
 		this.pinNo = pinNo;
 		this.photo = photo;
-		this.register = register;
-	}
-
-	public Integer getCarId() {
-		return carId;
-	}
-
-	public void setCarId(Integer carId) {
-		this.carId = carId;
+		this.ccid = ccid;
 	}
 
 	public String getCarCompany() {
@@ -201,29 +159,20 @@ public class Cars {
 		this.photo = photo;
 	}
 
-	public Register getRegister() {
-		return register;
+	public int getCcid() {
+		return ccid;
 	}
 
-	public void setRegister(Register register) {
-		this.register = register;
+	public void setCCid(int ccid) {
+		this.ccid = ccid;
 	}
 
 	@Override
 	public String toString() {
-		return "Cars [carId=" + carId + ", carCompany=" + carCompany + ", color=" + color + ", purchaseDate="
-				+ purchaseDate + ", owners=" + owners + ", totalRunning=" + totalRunning + ", carModel=" + carModel
-				+ ", regno=" + regno + ", price=" + price + ", city=" + city + ", state=" + state + ", pinNo=" + pinNo
-				+ ", photo=" + photo + ", register=" + register + "]";
+		return "Cars_coming [carCompany=" + carCompany + ", color=" + color + ", purchaseDate=" + purchaseDate
+				+ ", owners=" + owners + ", totalRunning=" + totalRunning + ", carModel=" + carModel + ", regno="
+				+ regno + ", price=" + price + ", city=" + city + ", state=" + state + ", pinNo=" + pinNo + ", photo="
+				+ photo + ", cid=" + ccid + "]";
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }

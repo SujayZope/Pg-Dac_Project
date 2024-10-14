@@ -12,11 +12,11 @@ import com.example.demo.model.User;
 import com.example.demo.repositary.Userdao;
 
 @SpringBootApplication
-public class ProjectTemp1Application  {
+public class CarProjectBackEndApplication  {
 
 	
 	public static void main(String[] args) {
-		SpringApplication.run(ProjectTemp1Application.class, args);
+		SpringApplication.run(CarProjectBackEndApplication.class, args);
 		
 		
 		
